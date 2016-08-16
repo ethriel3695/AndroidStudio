@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">City Facts</string>
+    <string name="txtTitle">Rigby, Idaho Facts</string>
+    <string name="description">Rigby, Idaho Image</string>
+    <string name="btnRecipe">View 3 Facts</string>
+    <string name="txtFacts">Facts</string>
+    <string name="txtFact1">The first television was created in Rigby, Idaho by a high school student</string>
+    <string name="txtFact2">Population of 3525</string>
+    <string name="txtFact3">Stampede days parade and Rodeo the 3rd week of June every year</string>
+</resources>
