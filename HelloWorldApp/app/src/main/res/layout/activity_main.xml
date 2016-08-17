@@ -8,10 +8,39 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.elllistech.helloworldapp.MainActivity">
+    tools:context="com.elllistech.helloworldapp.MainActivity"
+    android:background="#006699">
 
     <TextView
-        android:text="Hello World!"
+        android:text="@string/txtViewHelloWorld"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewHelloWorld"
+        android:layout_marginTop="31dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnName1"
+        android:id="@+id/btnName1"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/btnLargeText"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/textViewHelloWorld"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnName2"
+        android:id="@+id/btnName2"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/btnLargeText"
+        android:layout_alignTop="@+id/btnName1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>
