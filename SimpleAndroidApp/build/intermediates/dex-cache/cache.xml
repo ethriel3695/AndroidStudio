@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="c936c1bd42f0c018c18920c7bec619ef056b24f8">
+        <dex dex="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.1.1_9947c3353702cc3c127e69c17411b4cc40f6c579\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="4add8aa95c9f4e9a2ad64b7e2bf08e97e28955c1">
+        <dex dex="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-24.1.1_5454748b7a5439a3abcdeefe10bc1f8dbff80f16\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="c9e72709ec2c9ba6912bccfd5c0913354208cbea">
+        <dex dex="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_5cd349c710ec11fe4952095437ab383264f0d46d\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="6d7d803871e3203465f71a163e7af104f807b446">
+        <dex dex="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.1.1_f945b6b43f0bddb70f9d5ae32625f2f59963f6e3\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="fd0c6170ee541cc35b6ed085f02812be328bbf26">
+        <dex dex="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_eb31ab146ef6d0bbe3c964d462d9e1870cc96adf\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\jars\libs\internal_impl-24.1.1.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="ca74722504f90166103d01edcdfdb93192eb1cba">
+        <dex dex="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.1.1_ac3a4b359a47b783f55459fd22b1d577bd06c406\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="1256c10604bb098490eab070d76754ac5ceab35c">
+        <dex dex="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.1.1_8448ee4b765244cec071a1de302d220db00d1406\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="327f68d58bb39fb8b585150596b313541f8fdb87">
+        <dex dex="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v13-24.1.1_9b2c441ec95172afaeb64826f61c8ac31941dccf\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\ethri\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\24.1.1\3af19f153122737b372622fa6c81dd11a1c6b999\support-annotations-24.1.1.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
+        <dex dex="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.1.1_20fead39da95b65f98a7b99267cc79ac2fae6791\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\libs\internal_impl-24.1.1.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
+        <dex dex="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.1.1_16cb243e8e829e50ff04328f46fbe31d6fb8bd1f\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="f62e763609f65e47dc6c498760a4accf02776788">
+        <dex dex="C:\Users\ethri\AndroidStudioProjects\AndroidStudio\SimpleAndroidApp\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.1.1_9014a4fc7402fd91f576f2afa5ef7983fd3b69d7\classes.dex" />
+    </item>
+
+</items>
