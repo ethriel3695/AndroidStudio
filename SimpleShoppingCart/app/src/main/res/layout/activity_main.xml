@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.elllistech.simpleshoppingcart.MainActivity"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtComputerRepair"
+        android:id="@+id/txtComputerRepair"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/blackThemeFontSize"
+        android:layout_alignLeft="@+id/txtServerAndDatabase"
+        android:layout_alignStart="@+id/txtServerAndDatabase"
+        android:layout_marginTop="110dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtPhoneApplication"
+        android:id="@+id/txtPhoneApplication"
+        android:layout_marginTop="200dp"
+        android:textSize="@dimen/blackThemeFontSize"
+        android:textColor="@color/colorText"
+        android:layout_alignStart="@+id/txtComputerRepair"
+        android:layout_alignLeft="@+id/txtServerAndDatabase" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtWebApplication"
+        android:id="@+id/txtWebApplication"
+        android:layout_marginTop="290dp"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/blackThemeFontSize"
+        android:layout_alignLeft="@+id/txtServerAndDatabase"
+        android:layout_alignStart="@+id/txtPhoneApplication" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtBasicWebPages"
+        android:id="@+id/txtBasicWebPages"
+        android:layout_marginTop="380dp"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/blackThemeFontSize"
+        android:layout_alignLeft="@+id/txtServerAndDatabase"
+        android:layout_alignStart="@+id/txtWebApplication" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtServerAndDatabase"
+        android:id="@+id/txtServerAndDatabase"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/blackThemeFontSize"
+        android:layout_marginEnd="27dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="470dp"
+        android:layout_marginRight="27dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pcServicesButton"
+        android:contentDescription="@string/pcServices"
+        android:src="@mipmap/pcservices"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="90dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/phoneAppButton"
+        android:contentDescription="@string/phoneApp"
+        android:src="@mipmap/phoneapp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_marginTop="180dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/webAppButton"
+        android:contentDescription="@string/webApp"
+        android:src="@mipmap/webapp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_marginTop="270dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/basicPageButton"
+        android:contentDescription="@string/basicWebPage"
+        android:src="@mipmap/basicwebpage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_marginTop="360dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/serverDBButton"
+        android:contentDescription="@string/serverDatabaseServices"
+        android:src="@mipmap/serverdatabaseservices"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_marginTop="450dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/mainPageTitle"
+        android:text="@string/mainPageTitle"
+        android:textStyle="italic"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorText"
+        android:gravity="center_horizontal" />
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Ellis Tech IT Services</string>
+    <string name="mainPageTitle">Please click Image for Description of Services</string>
+    <string name="txtComputerRepair">Computer Repair Services</string>
+    <string name="txtPhoneApplication">Android Phone Applications</string>
+    <string name="txtWebApplication">Web Applications</string>
+    <string name="txtBasicWebPages">Basic Web Pages</string>
+    <string name="txtServerAndDatabase">Server and Database Services</string>
+    <string name="pcServices">PC Services</string>
+    <string name="phoneApp">phone App</string>
+    <string name="webApp">web App</string>
+    <string name="basicWebPage">basic Web Page</string>
+    <string name="serverDatabaseServices">server Database Services</string>
+
+    <string name="descriptionPageTitle">Description of PC Services</string>
+    <string name="shopping_cart">shopping cart</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="text_price_value">$89.99 USD</string>
+    <string name="total_price_title">Total Price:</string>
+    <string name="text_description">fdslkjfdsalkjfdsalkjfdsalkjfdsalkjfdsalkjfdsakjlfdsalkj;fdsakj fdskjlfdsalkjfdsalkjfdslkjfdsalkjfdsaljkfdsalkjfdslkjdsf fdsalkjdsaflkjdsaflkjfdsalkjdsalkjfdsalkjfdsalkj fdskjldsalkjdsflkjfdslkjfdsalkjdsfljfdsa fdsalkjfdsakjlfdsalkj;fdsalkj;fdsalkjfdsalkjfdsakj fdsalkj;fdsakj;ldsalkjdskjlfdskjlfdskfdjl fdskj;lfdsalkjfdsalkjfdsalkjfdsalkjfdsalkj fdsalkj;fdsalkjfdsalkjfdsalkjfdsalkjfddsalkj; fdsakj;ldsalkjfdsalkjfdsalkj;dsalkjfdsalkjfdsa</string>
+</resources>
