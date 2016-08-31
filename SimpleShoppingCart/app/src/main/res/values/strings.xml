@@ -12,10 +12,44 @@
     <string name="basicWebPage">basic Web Page</string>
     <string name="serverDatabaseServices">server Database Services</string>
 
-    <string name="descriptionPageTitle">Description of PC Services</string>
+    <string name="descriptionPageTitle">Description of Services</string>
     <string name="shopping_cart">shopping cart</string>
     <string name="add_to_cart">Add to Cart</string>
-    <string name="text_price_value">$89.99 USD</string>
+    <string name="back_to_home">Home Page</string>
     <string name="total_price_title">Total Price:</string>
-    <string name="text_description">fdslkjfdsalkjfdsalkjfdsalkjfdsalkjfdsalkjfdsakjlfdsalkj;fdsakj fdskjlfdsalkjfdsalkjfdslkjfdsalkjfdsaljkfdsalkjfdslkjdsf fdsalkjdsaflkjdsaflkjfdsalkjdsalkjfdsalkjfdsalkj fdskjldsalkjdsflkjfdslkjfdsalkjdsfljfdsa fdsalkjfdsakjlfdsalkj;fdsalkj;fdsalkjfdsalkjfdsakj fdsalkj;fdsakj;ldsalkjdskjlfdskjlfdskfdjl fdskj;lfdsalkjfdsalkjfdsalkjfdsalkjfdsalkj fdsalkj;fdsalkjfdsalkjfdsalkjfdsalkjfddsalkj; fdsakj;ldsalkjfdsalkjfdsalkj;dsalkjfdsalkjfdsa</string>
+    <string name="text_description">If you are seeing this message, it means the click event failed
+    and the user must restart the application.</string>
+    <string name="service_price">$ 00.00 USD</string>
+    <string name="pc_page_title">Description of PC Services</string>
+    <string name="pc_text_description">PC Services include diagnosing computer hardware and software
+    issues, recommendations for preventing future problems, and installing hardware and software.
+    Parts will require an additional charge for the cost of parts only installation is included in
+    the original fee price.</string>
+    <string name="pc_service_price">$89.99 USD</string>
+    <string name="phoneApp_page_title">Description of Phone Application Services</string>
+    <string name="phoneApp_text_description">Phone Application development includes initial
+    User Interface design and mock-up drafts.  Full application design and implementation,
+    including planning, design, implementation, testing, and publishing.  Maintenance is
+    provided free for six months after the application goes live.</string>
+    <string name="phoneApp_service_price">$75,000.00 USD</string>
+    <string name="webApp_page_title">Description of Web Application Services</string>
+    <string name="webApp_text_description">Web Application development includes a fully
+    functional web application complete with navigation, charts, graphs, database integration,
+    server design and domain hosting.  Maintenance is provided free for six months after the
+    application goes live.</string>
+    <string name="webApp_service_price">$60,000.00 USD</string>
+    <string name="basicWebSite_page_title">Description of Basic Website Services</string>
+    <string name="basicPage_text_description">A basic web page consists of static pages with
+    information and simple graphics.  The page can implement form submission such as a
+    contact form or user registration. This type of website is best suited for a blog,
+    e-commerce or informational pages.</string>
+    <string name="basicPage_service_price">$2,500.00 USD</string>
+    <string name="serverDB_page_title">Description of Server and Database Services</string>
+    <string name="serverDB_text_description">Server and Database services include maintaining
+    existing hardware and software as well as installing new hardware and integrating the
+    hardware with the rest of the system.  Services also include maintenance and fixes if a
+    server or database goes down.</string>
+    <string name="serverDB_service_price">$75.00/hr USD</string>
+
+    <string name="badgeValue">0</string>
 </resources>
