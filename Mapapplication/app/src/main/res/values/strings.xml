@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Map application</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="map_not_ready">The map is not ready please wait!</string>
+    <string name="normalView">Normal</string>
+    <string name="satelliteView">Satellite</string>
+</resources>
