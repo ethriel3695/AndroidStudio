@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Car Dealership</string>
+    <string name="add">Add</string>
+    <string name="view">View</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+</resources>
