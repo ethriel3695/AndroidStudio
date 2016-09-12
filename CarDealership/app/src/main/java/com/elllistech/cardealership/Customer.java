@@ -15,6 +15,10 @@ public class Customer {
     private double
         carCost;
 
+    public Customer () {
+
+    }
+
     public Customer (String firstName, String lastName, String make, double cost) {
         this.customerFirstName = firstName;
         this.customerLastName = lastName;

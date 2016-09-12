@@ -4,4 +4,14 @@
     <string name="view">View</string>
     <string name="update">Update</string>
     <string name="delete">Delete</string>
+
+    <string name="testButton">Test Button</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="car_make">Car Make</string>
+    <string name="car_cost">Car Cost</string>
+    <string name="delete_customer">Delete Customer</string>
+    <string name="update_customer">Update Customer</string>
 </resources>

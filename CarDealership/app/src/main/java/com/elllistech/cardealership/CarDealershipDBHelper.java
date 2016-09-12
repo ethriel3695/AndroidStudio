@@ -61,7 +61,7 @@ public class CarDealershipDBHelper extends SQLiteOpenHelper{
         long
                 customerId = db.insert(Dealership_Table, null, carValues);
         customer.setCustomerID(customerId);
-        db.close();
+        Log.d("", "Customer Created!");
     }
     public ArrayList<Customer> getAllCustomers() {
         ArrayList<Customer>
@@ -110,6 +110,5 @@ public class CarDealershipDBHelper extends SQLiteOpenHelper{
     public void deleteCustomer(Customer customer) {
         db.delete(Dealership_Table, CustomerID + "=?",
                 new String[]{String.valueOf(customer.getCustomerID())});
-        db.close();
     }
 }

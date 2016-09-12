@@ -1,38 +1,131 @@
 package com.elllistech.cardealership;
 
+import android.content.Context;
+import android.net.Uri;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-import java.util.List;
-
-public class dealershipDatabaseInteraction extends AppCompatActivity {
+public class dealershipDatabaseInteraction extends AppCompatActivity implements
+        viewCustomerFragment.OnFragmentInteractionListener,
+        addCustomerFragment.OnFragmentInteractionListener,
+        updateCustomerFragment.OnFragmentInteractionListener,
+        deleteCustomerFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dealership_database_interaction);
 
-        //TODO: Add insert functionality to the add button and create the layout
-        CarDealershipDBHelper
-                db = new CarDealershipDBHelper(this);
-        Log.d("Add: ", "Adding Customers ...");
-        db.addCustomer(new Customer("Fred", " Plantain", " Nissan", 30999.00));
-        db.addCustomer(new Customer("Jack", " Smith", " Mercedes", 85550.00));
-        db.addCustomer(new Customer("Lucy", " Diamond", " Lexus", 38255.00));
-        db.addCustomer(new Customer("Patrick", " Nelson", " Ford", 22145.00));
-        db.addCustomer(new Customer("Alice", " Jackson", " Chevrolet", 26850.00));
+        android.support.v4.app.Fragment fragmentManager =
+                getSupportFragmentManager().findFragmentById(R.id.blankFragmentContainer);
 
-// Reading all shops
-        Log.d("Obtaining: ", "Obtaining all Customers ...");
-        List<Customer> customerList = db.getAllCustomers();
+        viewCustomerFragment fragment = new viewCustomerFragment();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 
-        for (Customer customer : customerList) {
-            String log = "Id: " + customer.getCustomerID() + " ,First Name: " +
-                    customer.getFirstName() + " ,Last Name: " + customer.getLastName() +
-                    " ,Car Make:" + customer.getCarMake() + " ,Car Cost: " + customer.getCarCost();
-// Writing shops to log
-            Log.d("Shop: : ", log);
-        }
+
+        fragmentTransaction.replace(R.id.blankFragmentContainer, fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+
+        final Button
+                addButton = (Button)findViewById(R.id.btnAdd),
+                viewButton = (Button)findViewById(R.id.btnView),
+                updateButton = (Button)findViewById(R.id.btnUpdate),
+                deleteButton = (Button)findViewById(R.id.btnDelete);
+
+        final Context context = this;
+
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (findViewById(R.id.txtFirstName) != null) {
+                    EditText
+                            txtFirstName = (EditText)findViewById(R.id.txtFirstName),
+                            txtLastName = (EditText)findViewById(R.id.txtLastName),
+                            txtCarMake = (EditText)findViewById(R.id.txtCarMake),
+                            txtCarCost = (EditText)findViewById(R.id.txtCarCost);
+                    String
+                            firstName = txtFirstName.getText().toString(),
+                            lastName = txtLastName.getText().toString(),
+                            carMake = txtCarMake.getText().toString(),
+                            carCostText = txtCarCost.getText().toString();
+
+                    if (!firstName.equals("") && !lastName.equals("") && !carMake.equals("") &&
+                            !carCostText.equals("")) {
+                        CarDealershipDBHelper
+                                db = new CarDealershipDBHelper(context);
+                        double
+                                carCost = Double.parseDouble(carCostText);
+                        db.addCustomer(new Customer(firstName, lastName, carMake, carCost));
+                        Toast.makeText(context,
+                                "Customer " + firstName + " added!",
+                                Toast.LENGTH_SHORT).show();
+
+                    } else {
+                        Toast.makeText(dealershipDatabaseInteraction.this,
+                                "Please fill out all fields to add a Customer!",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    addCustomerFragment fragment = new addCustomerFragment();
+                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+
+
+                    fragmentTransaction.replace(R.id.blankFragmentContainer, fragment);
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                }
+            }
+        });
+
+        viewButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                viewCustomerFragment fragment = new viewCustomerFragment();
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+
+
+                fragmentTransaction.replace(R.id.blankFragmentContainer, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
+        updateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateCustomerFragment fragment = new updateCustomerFragment();
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+
+
+                fragmentTransaction.replace(R.id.blankFragmentContainer, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
+        deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                deleteCustomerFragment fragment = new deleteCustomerFragment();
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+
+
+                fragmentTransaction.replace(R.id.blankFragmentContainer, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }
