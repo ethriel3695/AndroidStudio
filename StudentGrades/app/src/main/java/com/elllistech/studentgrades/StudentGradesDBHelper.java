@@ -10,7 +10,9 @@ import android.util.Log;
 import java.util.ArrayList;
 
 /**
- * Created by ethri on 9/13/2016.
+ * Created by Reuben Ellis on 9/13/2016
+ * The StudentGradesDBHelper class declares components and methods
+ * for creating and working with a SQLite database
  */
 public class StudentGradesDBHelper extends SQLiteOpenHelper {
 
@@ -36,10 +38,13 @@ public class StudentGradesDBHelper extends SQLiteOpenHelper {
     ContentValues
             studentValues = new ContentValues();
 
+    //The Constructor for the class which accepts the current context of the database object
     public StudentGradesDBHelper(Context context) {
         super(context, StudentGradesDB, null, DatabaseVersion);
     }
 
+    //The onCreate method contains a SQL string complete with column
+    //names and data types and then the sql is executed to create the table
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String
@@ -50,12 +55,17 @@ public class StudentGradesDBHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(SQLTableCreation);
     }
 
+    //The onUpgrade method updates the database whenever changes are made to the database
+    //and a new version of the database is created
     @Override
     public void onUpgrade(SQLiteDatabase db, int currentVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + Student_Table);
         onCreate(db);
     }
 
+    //The addStudent method accepts a Student object and puts
+    //values within the declared ContentValues and inserts the values
+    //into the database via the insert method
     public void addStudent(Student student) {
         studentValues.put(StudentID, student.getStudentID());
         studentValues.put(StudentFirstName, student.getFirstName());
@@ -64,12 +74,15 @@ public class StudentGradesDBHelper extends SQLiteOpenHelper {
         studentValues.put(ClassName, student.getClassName());
         studentValues.put(Grade, student.getStudentGrade());
         studentValues.put(LetterGrade, student.getLetterGrade());
-//        long
-//                customerId = db.insert(Student_Table, null, studentValues);
         db.insert(Student_Table, null, studentValues);
-        //student.setCustomerID(customerId);
     }
 
+    //The getAllStudents method is an ArrayList of type Student
+    //and returns a Student list which contains all the rows
+    //and columns from the database.  The selectCustomersQuery
+    //gets all the records and then the method iterates through the
+    //records by using a while loop which checks for records until
+    //no more records are found
     public ArrayList<Student> getAllStudents() {
         ArrayList<Student>
                 studentList = new ArrayList<>();
@@ -109,8 +122,12 @@ public class StudentGradesDBHelper extends SQLiteOpenHelper {
         }
         return studentList;
     }
+    //The updateStudentGrade method puts the student grade into
+    //the ContentValues variable and then updates the database based
+    //on the Student ID and Class ID to update a unique record
     public int updateStudentGrade(Student student) {
         studentValues.put(Grade, student.getStudentGrade());
+        studentValues.put(LetterGrade, student.getLetterGrade());
 
         return db.update(Student_Table, studentValues, StudentID + "=? AND " + ClassID + "=?",
                 new String[]{student.getStudentID(), student.getClassID()});

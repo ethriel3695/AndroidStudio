@@ -19,6 +19,11 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Created by Reuben Ellis on 9/13/2016
+ * The ViewGradesActivity iterates through the users and grades
+ * assigned to each user and creates Lists to store the values
+ */
 public class ViewGradesActivity extends AppCompatActivity {
 
     @Override
@@ -51,7 +56,6 @@ public class ViewGradesActivity extends AppCompatActivity {
                 studentIDCheck = "",
                 letterGrade = "";
         ArrayList<String>
-                studentExists = new ArrayList<>(),
                 letterGradeList = new ArrayList<>(),
                 studentNamesList = new ArrayList<>();
         int
@@ -63,6 +67,9 @@ public class ViewGradesActivity extends AppCompatActivity {
                 gradeTotal = new ArrayList<>(),
                 countOfClassesList = new ArrayList<>();
 
+        //This loop adds student names to a List and if the student ID
+        //matches the ID already in the list, the next grade is added to the
+        //previous grade and a count is added for the user having multiple classes
         for (Student filterStudent : studentList) {
             if (!studentIDCheck.equals(filterStudent.getStudentID())) {
                 numberOfClasses = 0;
@@ -70,7 +77,6 @@ public class ViewGradesActivity extends AppCompatActivity {
                         + filterStudent.getLastName());
                 studentIDCheck = filterStudent.getStudentID();
                 gradeValue = filterStudent.getStudentGrade();
-                studentExists.add(filterStudent.getStudentID());
                 studentIndex += 1;
                 numberOfClasses += 1;
             }
@@ -87,6 +93,8 @@ public class ViewGradesActivity extends AppCompatActivity {
                 countOfClassesList.add(numberOfClasses);
             }
         }
+        //This loop checks to see the grade for a user and divides the total
+        //grade value by the number of classes the user has to obtain a letter Value
         for (int grade : gradeTotal) {
             if (countOfClassesList.get(classesCountIdentifier) == 2) {
                 grade = grade / 2;
@@ -125,7 +133,7 @@ public class ViewGradesActivity extends AppCompatActivity {
                     TableRow.LayoutParams.WRAP_CONTENT));
             txtColumn.setGravity(Gravity.CENTER);
             txtColumn.setTextSize(18);
-            txtColumn.setPadding(235, 19, 155, 19);
+            txtColumn.setPadding(215, 19, 155, 19);
             txtColumn.setText(column);
             studentColumns.addView(txtColumn);
         }
@@ -147,7 +155,7 @@ public class ViewGradesActivity extends AppCompatActivity {
                             TableRow.LayoutParams.WRAP_CONTENT));
                     studentEachColumn.setGravity(Gravity.CENTER);
                     studentEachColumn.setTextSize(16);
-                    studentEachColumn.setPadding(235, 19, 155, 19);
+                    studentEachColumn.setPadding(215, 19, 155, 19);
                     studentEachColumn.setText(studentValue);
                     studentRow.addView(studentEachColumn);
             }

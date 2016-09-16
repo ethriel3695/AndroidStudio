@@ -26,10 +26,8 @@
         android:text="@string/enter_grades"
         android:id="@+id/btnBackToEnterGrades"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/btnBackToEnterStudents"
-        android:layout_toEndOf="@+id/btnBackToEnterStudents"
-        android:layout_marginLeft="51dp"
-        android:layout_marginStart="51dp" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"

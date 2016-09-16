@@ -1,7 +1,10 @@
 package com.elllistech.studentgrades;
 
 /**
- * Created by ethri on 9/13/2016.
+ * Created by Reuben Ellis on 9/13/2016
+ * The Student Class is a Student object with variables,
+ * a default constructor, a constructor which takes all values
+ * of the class, and get and set methods for each value
  */
 public class Student {
 

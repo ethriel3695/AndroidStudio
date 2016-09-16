@@ -21,6 +21,13 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Created by Reuben Ellis on 9/13/2016
+ * The EnterStudentGradesActivity class contains methods
+ * for creation and interaction with the Student Grades Entry Page
+ * Also, the TableLayout and rows are generated dynamically so only
+ * rows for existing records are created and visible on the page
+ */
 public class EnterStudentGradesActivity extends AppCompatActivity {
 
     @Override
@@ -32,7 +39,6 @@ public class EnterStudentGradesActivity extends AppCompatActivity {
                 context = this;
         final Student
                 students = new Student();
-
         Button
                 btnStudentCreation = (Button)findViewById(R.id.btnStudentCreation),
                 btnViewGrades = (Button)findViewById(R.id.btnViewGrades);
@@ -42,7 +48,12 @@ public class EnterStudentGradesActivity extends AppCompatActivity {
 
         StudentGradesDBHelper
                 db = new StudentGradesDBHelper(context);
-        final List<Student> studentList = db.getAllStudents();
+        final List<Student>
+                studentList = db.getAllStudents();
+        int
+                idCount = 100;
+        final ArrayList<Integer>
+                editTextIDList = new ArrayList<>();
 
         TableLayout
                 tblStudentRecords = (TableLayout)findViewById(R.id.tblStudentRecords);
@@ -54,13 +65,6 @@ public class EnterStudentGradesActivity extends AppCompatActivity {
                 TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
         String[]
             columnNames = {"ID", "Student", "Class ID", "Class Name", "Grade"};
-
-        int
-                idCount = 100;
-        final ArrayList<Integer>
-            editTextIDList = new ArrayList<>();
-        final ArrayList<String>
-                checkEmptyGrades = new ArrayList<>();
 
         for (String column : columnNames) {
             TextView
@@ -102,7 +106,6 @@ public class EnterStudentGradesActivity extends AppCompatActivity {
 
                         studentGrade.setId(idCount);
                         editTextIDList.add(idCount);
-                        Log.d("Text View ID", "" + studentGrade.getId());
 
                         studentRow.addView(studentGrade);
 
@@ -134,6 +137,10 @@ public class EnterStudentGradesActivity extends AppCompatActivity {
             }
         });
 
+        //The View Grades button onClick method checks to see if
+        //the grade box is empty or contains a value over 100 and if
+        //so, the user receives a message indicating a change is necessary
+        //and the user will stay on the current page until changes are made
         btnViewGrades.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -144,10 +151,13 @@ public class EnterStudentGradesActivity extends AppCompatActivity {
                         currentStudentID = "",
                         currentClassID = "";
                 int
-                    indexCount = 0;
+                    indexCount = 0,
+                    currentGradeValue = 0;
                 ArrayList<String>
                         studentIds = new ArrayList<String>(),
                         classIds = new ArrayList<String>();
+                ArrayList<String>
+                        checkEmptyGrades = new ArrayList<>();
                 StudentGradesDBHelper
                         dbUpdate = new StudentGradesDBHelper(context);
                 for (Student currentStudent : studentList) {
@@ -156,7 +166,6 @@ public class EnterStudentGradesActivity extends AppCompatActivity {
                     studentIds.add(studentID);
                     classIds.add(classID);
                 }
-                //editTextIDList.get(1);
                 for(int textID : editTextIDList) {
                     EditText
                             gradesText = (EditText)findViewById(textID);
@@ -167,12 +176,26 @@ public class EnterStudentGradesActivity extends AppCompatActivity {
                         currentClassID = classIds.get(indexCount);
                         students.setStudentID(currentStudentID);
                         students.setClassID(currentClassID);
+                        currentGradeValue = Integer.parseInt(currentGrade);
+                        if (currentGradeValue >= 90) {
+                            students.setLetterGrade("A");
+                        }
+                        else if (currentGradeValue >= 80 && currentGradeValue <= 89) {
+                            students.setLetterGrade("B");
+                        }
+                        else if (currentGradeValue >= 70 && currentGradeValue <= 79) {
+                            students.setLetterGrade("C");
+                        }
+                        else if (currentGradeValue >= 60 && currentGradeValue <= 69) {
+                            students.setLetterGrade("D");
+                        }
+                        else if (currentGradeValue < 60) {
+                            students.setLetterGrade("F");
+                        }
                         dbUpdate.updateStudentGrade(students);
                     }
                     else {
                         checkEmptyGrades.add(currentGrade);
-                        Toast.makeText(context, "Please enter a grade between 0 - 100!",
-                                Toast.LENGTH_SHORT).show();
                     }
                     indexCount += 1;
                 }
@@ -182,7 +205,7 @@ public class EnterStudentGradesActivity extends AppCompatActivity {
                     startActivity(gradesIntent);
                 }
                 else {
-                    Toast.makeText(context, "Please enter a grade for each class!",
+                    Toast.makeText(context, "Please enter a grade between 0 - 100 for each class!",
                             Toast.LENGTH_SHORT).show();
                 }
 
