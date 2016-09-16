@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Student Grades</string>
+    <string name="student_creation_process">Enter Student Info Into The Registry</string>
+    <string name="lbl_student_id">Student ID</string>
+    <string name="lbl_first_name">First Name</string>
+    <string name="lbl_last_name">Last Name</string>
+    <string name="lbl_class_id">Class ID</string>
+    <string name="lbl_class_name">Class Name</string>
+    <string name="add_student">Add Student</string>
+    <string name="enter_grades">Enter Grades</string>
+    <string name="back_to_student_entry">Student Creation</string>
+    <string name="view_grades">View Grades</string>
+    <string name="enter_students">Enter Students</string>
+</resources>
